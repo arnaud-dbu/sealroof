@@ -47,7 +47,7 @@
             e.preventDefault();
             $('html, body').animate({
                 scrollTop: target.offset().top - 80
-            }, 800, 'easeInOutExpo');
+            }, 400, 'easeInOutExpo');
 
             // Close mobile navbar after click
             var navbarCollapse = $('#navbarCollapse');
