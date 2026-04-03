@@ -9,7 +9,7 @@
       name="keywords"
     />
     <meta
-      content="Sealroof BV — uw specialist voor dakwerken in Antwerpen en Hoboken. Hellende daken, platte daken, dakisolatie en dakrenovatie. Vraag een gratis offerte aan."
+      content="Sealroof BV, uw specialist voor dakwerken in Antwerpen en Hoboken. Hellende daken, platte daken, dakisolatie en dakrenovatie. Vraag een gratis offerte aan."
       name="description"
     />
 
@@ -44,16 +44,18 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data: LocalBusiness -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "RoofingContractor"],
         "name": "Sealroof BV",
         "description": "Dakwerkbedrijf gespecialiseerd in hellende daken, platte daken, dakisolatie en dakrenovatie in Antwerpen en omgeving.",
         "url": "https://www.sealroof.be",
         "telephone": "+32466100098",
         "email": "info@sealroof.be",
+        "logo": "https://www.sealroof.be/svg/logo.svg",
+        "image": "https://www.sealroof.be/img/stock/stock-7.webp",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Kloosterstraat 126",
@@ -62,12 +64,110 @@
           "addressRegion": "Antwerpen",
           "addressCountry": "BE"
         },
-        "areaServed": {
-          "@type": "City",
-          "name": "Antwerpen"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.1677,
+          "longitude": 4.3525
         },
-        "openingHours": "Mo-Fr 07:00-18:00",
-        "priceRange": "$$"
+        "areaServed": [
+          { "@type": "City", "name": "Antwerpen" },
+          { "@type": "City", "name": "Hoboken" },
+          { "@type": "City", "name": "Wilrijk" },
+          { "@type": "City", "name": "Berchem" }
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "18:00"
+        },
+        "priceRange": "$$",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Dakwerken diensten",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Hellende daken",
+                "description": "Plaatsing en vernieuwing van hellende daken met dakpannen, leien of andere materialen."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Platte daken",
+                "description": "EPDM, roofing en bitumen: 100% waterdicht plat dak met jarenlange garantie."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Dakisolatie",
+                "description": "Professionele dakisolatie met hoogwaardige PIR- en Recticel-platen."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Dakrenovatie",
+                "description": "Volledige dakrenovatie van A tot Z, inclusief onderdak, isolatie en afwerking."
+              }
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "ratingCount": "5"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Jan D." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Ons hellend dak was dringend aan vervanging toe. Sealroof heeft alles vlot en netjes afgewerkt, zelfs iets onder het vooropgestelde budget."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Lien V." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Na jaren last van lekkages aan ons plat dak heeft Sealroof een volledig nieuwe EPDM-bedekking geplaatst. Sindsdien geen druppel meer binnen."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Marc S." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Dakisolatie laten plaatsen door Sealroof en het verschil is meteen merkbaar. Onze verwarmingskosten zijn flink gedaald."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Sarah M." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Twee Velux-dakramen laten plaatsen op onze zolder. Het team van Sealroof werkte heel precies en proper."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Koen B." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Het zinkwerk en de dakgoten van onze woning waren helemaal versleten. Sealroof heeft alles vakkundig vernieuwd."
+          }
+        ]
+      }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Sealroof BV",
+        "url": "https://www.sealroof.be"
       }
     </script>
   </head>
@@ -124,7 +224,7 @@
       <a href="#" class="navbar-brand d-flex align-items-center">
         <img
           src="svg/logo.svg"
-          alt="Sealroof BV — dakwerken Antwerpen"
+          alt="Sealroof BV dakwerken Antwerpen"
           style="height: 50px"
         />
       </a>
@@ -235,7 +335,7 @@
                 Sealroof BV is een gevestigd dakwerkbedrijf uit Hoboken dat al
                 meer dan 10 jaar actief is in Antwerpen en ruime omgeving. Of
                 het nu gaat om een nieuw hellend dak, een waterdicht plat dak of
-                een grondige dakrenovatie — wij leveren vakwerk waar u op kunt
+                een grondige dakrenovatie: wij leveren vakwerk waar u op kunt
                 rekenen.
               </p>
               <p class="mb-4">
@@ -305,7 +405,7 @@
               <span class="display-1">02</span>
               <h3 class="text-white mb-3">Platte daken</h3>
               <p class="text-white">
-                EPDM, roofing en bitumen — wij zorgen voor een 100% waterdicht
+                EPDM, roofing en bitumen: wij zorgen voor een 100% waterdicht
                 plat dak met jarenlange garantie.
               </p>
             </div>
@@ -339,7 +439,7 @@
               <span class="display-1">04</span>
               <h3 class="text-white mb-3">Dakrenovatie</h3>
               <p class="text-white">
-                Uw dak aan vernieuwing toe? Wij renoveren uw dak van A tot Z —
+                Uw dak aan vernieuwing toe? Wij renoveren uw dak van A tot Z,
                 inclusief onderdak, isolatie en afwerking.
               </p>
             </div>
@@ -376,7 +476,7 @@
                   <span class="fw-bold">Breed dienstenaanbod</span>
                 </div>
                 <span
-                  >Van hellende daken tot dakisolatie en zinkwerk — alles onder
+                  >Van hellende daken tot dakisolatie en zinkwerk: alles onder
                   één dak.</span
                 >
               </div>
@@ -412,7 +512,7 @@
                   <span class="fw-bold">Scherpe en transparante prijzen</span>
                 </div>
                 <span
-                  >Eerlijke offertes zonder verrassingen — u weet altijd waar u
+                  >Eerlijke offertes zonder verrassingen: u weet altijd waar u
                   aan toe bent.</span
                 >
               </div>
@@ -471,7 +571,7 @@
             <p class="text-white mb-0">
               Heeft u dakwerken nodig in Antwerpen of omgeving? Neem vandaag nog
               contact op. Wij bezorgen u binnen 48 uur een gedetailleerde
-              offerte op maat. Vrijblijvend en zonder verplichtingen — u kunt
+              offerte op maat. Vrijblijvend en zonder verplichtingen. U kunt
               ook bellen naar <strong>0466 10 00 98</strong> of
               <strong>0487 59 33 62</strong>.
             </p>

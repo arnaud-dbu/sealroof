@@ -311,6 +311,16 @@
     background-size: cover;
 }
 
+.appointment .form-control,
+.appointment .form-select {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.appointment .form-control::placeholder,
+.appointment .form-floating label {
+    color: rgba(255, 255, 255, 0.65);
+}
+
 
 /*** Team ***/
 .team-text {
