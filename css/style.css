@@ -163,6 +163,12 @@
     color: var(--primary);
 }
 
+@media (max-width: 767px) {
+    .hero-section .breadcrumb-item {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     #header-carousel .carousel-item {
         position: relative;
@@ -184,9 +190,45 @@
     }
 }
 
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section > img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hero-section > img {
+        height: 600px;
+    }
+}
+
+.hero-section .carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    background: rgba(0, 0, 0, .65);
+    z-index: 1;
+}
+
 .page-header {
     background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
+}
+
+.form-select.bg-dark {
+    color: #999;
 }
 
 .page-header .breadcrumb-item+.breadcrumb-item::before {
@@ -195,21 +237,36 @@
 
 
 /*** Facts ***/
+.facts-item {
+    height: 500px;
+}
+
+.facts-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .facts-overlay {
     position: absolute;
     padding: 30px;
+    padding-top: 100px;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
     background: rgba(0, 0, 0, .65);
 }
 
-.facts-overlay h1 {
+.facts-overlay .display-1 {
     font-size: 120px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
     color: transparent;
     -webkit-text-stroke: 2px var(--primary);
 }
@@ -250,7 +307,7 @@
 
 /*** Appointment ***/
 .appointment {
-    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url(../img/carousel-2.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url(../img/stock/stock-1.webp) center center no-repeat;
     background-size: cover;
 }
 

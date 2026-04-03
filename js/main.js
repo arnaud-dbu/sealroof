@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,8 +24,8 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -37,6 +37,24 @@
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
+    });
+
+
+    // Smooth scrolling for anchor links
+    $('a[href^="#"]').on('click', function (e) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top - 80
+            }, 800, 'easeInOutExpo');
+
+            // Close mobile navbar after click
+            var navbarCollapse = $('#navbarCollapse');
+            if (navbarCollapse.hasClass('show')) {
+                navbarCollapse.collapse('hide');
+            }
+        }
     });
 
 
@@ -54,6 +72,5 @@
         ]
     });
 
-    
-})(jQuery);
 
+})(jQuery);
